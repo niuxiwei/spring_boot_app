@@ -1,12 +1,14 @@
-package cn.sunline.spring_boot_app.config;
+package cn.sunline.config;
 
-import cn.sunline.spring_boot_app.domain.ResultBo;
-import cn.sunline.spring_boot_app.domain.User;
-import cn.sunline.spring_boot_app.repository.UserRepository;
+import cn.sunline.domain.User;
+import cn.sunline.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.reactive.function.server.*;
+import org.springframework.web.reactive.function.server.RequestPredicates;
+import org.springframework.web.reactive.function.server.RouterFunction;
+import org.springframework.web.reactive.function.server.RouterFunctions;
+import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 
 import java.util.Collection;

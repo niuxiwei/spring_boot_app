@@ -1,6 +1,6 @@
-package cn.sunline.spring_boot_app.repository;
+package cn.sunline.repository;
 
-import cn.sunline.spring_boot_app.domain.User;
+import cn.sunline.domain.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;

@@ -1,8 +1,8 @@
-package cn.sunline.spring_boot_app.controller;
+package cn.sunline.controller;
 
-import cn.sunline.spring_boot_app.domain.ResultBo;
-import cn.sunline.spring_boot_app.domain.User;
-import cn.sunline.spring_boot_app.repository.UserRepository;
+import cn.sunline.domain.ResultBo;
+import cn.sunline.domain.User;
+import cn.sunline.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

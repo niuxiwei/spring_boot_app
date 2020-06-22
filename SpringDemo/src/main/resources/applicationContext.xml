@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- bean definitions here -->
+    <!-- 此标签的作用 是实例化UserServiceImpl类的实例 交给 Spring 容器 -->
+<!--    <bean id="userService" name="userService2" class="cn.sunline.service.impl.UserServiceImpl"></bean>-->
+    <bean id="user"  class="cn.sunline.domain.User"  >
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name" value="zs"></constructor-arg>
+    </bean>
+    <bean name="userDao" class="cn.sunline.dao.impl.UserDaoImpl"></bean>
+    <bean name="userService" class="cn.sunline.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+</beans>
